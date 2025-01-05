@@ -4,7 +4,7 @@ import "./Service.css";
 const Services = () => {
   return (
     <div className="container-xxl py-5">
-      <div className="services-container" style={{ width: "100vw"}}>
+      <div className="services-container" style={{ width: "100%" }}>
         <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6
             style={{ color: "#fd8a1f" }}

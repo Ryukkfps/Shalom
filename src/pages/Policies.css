@@ -1,18 +1,16 @@
 .policies-container {
     padding: 20px;
-    width: 100dvw;
-    background-color: #f9f9f9;
+    background-color: #83084a;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .policies-title {
     font-size: 24px;
-    color: #333;
+    color: #fd8a1f;
     margin-bottom: 16px;
   }
   
@@ -22,7 +20,7 @@
   
   .policy-item {
     font-size: 16px;
-    color: #555;
+    color: white;
     margin-bottom: 8px;
     line-height: 1.5;
   }

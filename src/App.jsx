@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
-import Services from "./pages/Services";
+import ContactUs from "./pages/ContactUs";
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <Router>
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );
