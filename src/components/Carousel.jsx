@@ -1,62 +1,51 @@
 import React from 'react'
-import slide1 from '../assets/slide1.jpg'
-import slide2 from '../assets/slide2.jpg'
-import slide3 from '../assets/slide3.jpg'   
-
+import img1 from '../assets/slide1.jpg'
+import img2 from '../assets/slide2.jpg'
+import img3 from '../assets/slide3.jpg'
+import './Carousel.css'
 
 const Carousel = () => {
   return (
-    <div 
-      id="carouselExample" 
-      className="carousel slide" 
-      data-bs-ride="carousel"
-      data-bs-interval="3000"
-      style={{ height: '85vh' }}
-    >
-      {/* Carousel Indicators */}
-      <div className="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div className="container-fluid p-0 mb-5">
+      <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active fade-in">
+            <img className="w-100" src={img1} alt="Image" style={{ maxHeight: '80vh', objectFit: 'cover', filter: 'brightness(0.5)' }} />
+            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div className="p-3 fade-in" style={{ maxWidth: '700px' }}>
+                <h1 className="display-3 text-white mb-4 animated slideInDown">Welcome to Shalom</h1>
+                <h6 className="section-title text-uppercase mb-3 animated slideInDown" style={{ color: 'white' }}>Your stay in the heart of the city</h6>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item fade-in">
+            <img className="w-100" src={img2} alt="Image" style={{ maxHeight: '80vh', objectFit: 'cover', filter: 'brightness(0.5)' }} />
+            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div className="p-3 fade-in" style={{ maxWidth: '700px' }}>
+                <h1 className="display-3 text-white mb-4 animated slideInDown">Enjoy your stay with us</h1>
+                <h6 className="section-title text-uppercase mb-3 animated slideInDown" style={{ color: 'white' }}>With the warmth of our hospitality and the luxury of our facilities</h6>
+              </div>
+            </div>
+          </div>
+          <div className="carousel-item fade-in">
+            <img className="w-100" src={img3} alt="Image" style={{ maxHeight: '80vh', objectFit: 'cover', filter: 'brightness(0.5)' }} />
+            <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div className="p-3 fade-in" style={{ maxWidth: '700px' }}>
+                <h1 className="display-3 text-white mb-4 animated slideInDown">Make your Maha Kumbh visit memorable</h1>
+                <h6 className="section-title text-uppercase mb-3 animated slideInDown" style={{ color: 'white' }}>With our luxurious facilities and the best services</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
-
-      {/* Carousel Items */}
-      <div className="carousel-inner h-100">
-        <div className="carousel-item active h-100 position-relative">
-          <div className="position-absolute w-100 h-100 bg-dark" style={{ opacity: '0.5' }}></div>
-          <img src={slide1} className="d-block w-100 h-100" style={{ objectFit: 'cover' }} alt="First slide" />
-          <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h2 className="display-4 fw-bold">Welcome to Shalom </h2>
-            <p className="lead">Your stay in the heart of the city</p>
-          </div>
-        </div>
-        <div className="carousel-item h-100 position-relative">
-          <div className="position-absolute w-100 h-100 bg-dark" style={{ opacity: '0.5' }}></div>
-          <img src={slide2} className="d-block w-100 h-100" style={{ objectFit: 'cover' }} alt="Second slide" />
-          <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h2 className="display-4 fw-bold">Enjoy your stay with us</h2>
-            <p className="lead">With the warmth of our hospitality and the luxury of our facilities</p>
-          </div>
-        </div>
-        <div className="carousel-item h-100 position-relative">
-          <div className="position-absolute w-100 h-100 bg-dark" style={{ opacity: '0.5' }}></div>
-          <img src={slide3} className="d-block w-100 h-100" style={{ objectFit: 'cover' }} alt="Third slide" />
-          <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
-            <h2 className="display-4 fw-bold">Make your Kumbh Mela memorable</h2>
-            <p className="lead">With our luxurious facilities and the best services</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Carousel Controls */}
-      <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
     </div>
   )
 }

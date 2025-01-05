@@ -1,0 +1,21 @@
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 15vh !important;
+  background-color: #83084a !important;
+  color: #fd8a1f !important;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fd8a1f !important;
+  font-weight: bold !important;
+}
+
+.nav-link{  
+    color: #fd8a1f !important;
+    font-weight: bold !important;
+}

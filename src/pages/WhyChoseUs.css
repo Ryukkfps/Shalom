@@ -1,0 +1,58 @@
+.why-chose-us {
+  text-align: center;
+  padding: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  counter-reset: feature-counter;
+}
+
+.feature {
+  width: 250px;
+  height: 350px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInSlideUp 0.9s ease-out forwards;
+  animation-delay: calc(var(--animation-delay) * var(--feature-index));
+  counter-increment: feature-counter;
+  --feature-index: calc(counter(feature-counter) * 0.9s);
+}
+
+.feature img {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature p {
+  font-weight: bold;
+  padding: 20px;
+}
+
+.feature:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
