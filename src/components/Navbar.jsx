@@ -11,9 +11,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className={`navbar navbar-expand-lg ${isOpen ? "navbar-expanded" : ""}`}>
       <div className="container">
-        <Link className="navbar-brand mr-auto" to="/">
+        <Link className="navbar-brand" to="/">
           <img
             src={logo}
             alt="Logo"
@@ -31,12 +31,10 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className={`collapse navbar-collapse justify-content-center ml-auto ${
-            isOpen ? "show" : ""
-          }`}
+          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
           id="navbarNav"
         >
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/" onClick={() => setIsOpen(false)}>
                 HOME
@@ -45,6 +43,11 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/About" onClick={() => setIsOpen(false)}>
                 ABOUT
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/gallery" onClick={() => setIsOpen(false)}>
+                GALLERY
               </Link>
             </li>
             <li className="nav-item">

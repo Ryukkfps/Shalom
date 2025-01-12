@@ -5,6 +5,13 @@
   height: 15vh !important;
   background-color: #83084a !important;
   color: #fd8a1f !important;
+  z-index: 1000;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.navbar-expanded {
+  height: 30vh !important;
 }
 
 .navbar-nav {
@@ -18,4 +25,13 @@
 .nav-link{  
     color: #fd8a1f !important;
     font-weight: bold !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
 }

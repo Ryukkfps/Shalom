@@ -7,7 +7,7 @@ import './Carousel.css'
 const Carousel = () => {
   return (
     <div className="container-fluid p-0 mb-5">
-      <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
+      <div id="header-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div className="carousel-inner">
           <div className="carousel-item active fade-in">
             <img className="w-100" src={img1} alt="Image" style={{ maxHeight: '80vh', objectFit: 'cover', filter: 'brightness(0.5)' }} />

@@ -23,14 +23,6 @@ const Homepage = () => {
         display: "flex",
       }}>
         <ContactUs />
-        <div>
-          <h2>
-            XYZ
-          </h2>
-        </div>
-        <div>
-          ABC
-        </div>
       </div>
     </div>
   );
